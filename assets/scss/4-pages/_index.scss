@@ -1,0 +1,407 @@
+// ********************
+// HERO SECTION
+// ********************
+
+#hero {
+    background-color: $light-gray;
+}
+
+.hero__wrapper {
+
+    @media screen and (min-width: 64rem) {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-gap: 3.75rem;
+    }
+
+}
+
+.hero__heading {
+    margin-bottom: 1.25rem;
+    color: $gray-500;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+
+    @media screen and (min-width: 64rem) {
+        margin-bottom: 2.5rem;
+    }
+
+}
+
+.hero__copy {
+
+    &:not(last-of-type) {
+        margin-bottom: 1.25rem;
+    }
+
+}
+
+// ********************
+// WAITLIST SECTION
+// ********************
+
+.waitlist__wrapper {
+
+    @media screen and (min-width: 64rem) {
+        margin: 0 auto;
+        max-width: 35.625rem;
+    }
+
+}
+
+.waitlist__heading {
+    @extend .hero__heading;
+    letter-spacing: unset;
+}
+
+.waitlist__copy {
+    margin-bottom: 1.25rem;
+
+    @media screen and (min-width: 64rem) {
+        margin-bottom: 2.5rem;
+    }
+
+}
+
+.waitlist__button {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1.5rem 3rem;
+    background-image: radial-gradient($gold-500, $gold-600);
+    background-color: $gold-500;
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    line-height: 1;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $white;
+    transition: opacity 0.3s;
+
+    &:hover {
+        opacity: 0.85;
+    }
+
+}
+
+.chevron {
+    margin-left: 0.5rem;
+    width: 1.25rem; height: 1.25rem;
+    background-image: url('/static/img/chevron-right.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+
+// ********************
+// TESTIMONIAL SECTION
+// ********************
+
+#testimonial {
+    background-image: radial-gradient($gray-400, $gray-500);
+    background-color: $gray-500;
+}
+
+.testimonial__wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-template-rows: repeeat(5, minmax(0, 1fr));
+    grid-gap: 1.875rem;
+
+    @media screen and (min-width: 40rem) and (max-width: 63.9375rem) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: repeeat(3, minmax(0, 1fr));
+    }
+
+    @media screen and (min-width: 64rem) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-rows: repeeat(2, minmax(0, 1fr));
+    }
+
+}
+
+.testimonial {
+    position: relative;
+    padding: 2.5rem;
+    background-color: rgba($white, 0.15);
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+    backdrop-filter: blur(4px) saturate(110%);
+    color: $gray-100;
+    font-style: italic;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0; left: 20%;
+        width: 0; height: 0;
+        border: 2rem solid transparent;
+        border-top-color: rgba($white, 0.15);
+        border-bottom: 0;
+        border-left: 0;
+        margin-left: -1rem;
+        margin-bottom: -2rem;
+    }
+
+}
+
+.avatar {
+    width: 3rem; height: 3rem;
+    border: 2px solid $white;
+    border-radius: 100vw;
+}
+
+// ********************
+// EXPECT SECTION
+// ********************
+
+.expect__heading {
+    @extend .hero__heading;
+    text-transform: unset;
+    letter-spacing: unset;
+    font-size: 700;
+}
+
+.expect__subheading {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    color: $gray-300;
+
+    @media screen and (min-width: 64rem) {
+        margin-bottom: 2.5rem;
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+}
+
+.expect__wrapper {
+    @extend .hero__wrapper;
+}
+
+.rule {
+    margin-bottom: 1.25rem;
+
+    @media screen and (min-width: 64rem) {
+        margin-bottom: 2.5rem;
+    }
+
+}
+
+.expect__checklist__item {
+    position: relative;
+    padding-left: 3rem;
+    color: $gray-300;
+
+    &:not(last-of-type) {
+        margin-bottom: 1.25rem;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 2rem; height: 2rem;
+        background-image: url('static/img/check-icon.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+    }
+
+    @media screen and (min-width: 64rem) {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+    }
+
+}
+
+// ********************
+// COURSE SECTION
+// ********************
+
+#course {
+    @extend #hero;
+}
+
+.course__wrapper {
+    @extend .expect__wrapper;
+}
+
+.course__heading {
+    @extend .expect__heading;
+    margin-bottom: 1.25rem;
+
+    @media screen and (min-width: 64rem) {
+        margin-bottom: 2.5rem;
+    }
+
+}
+
+.course__checklist__item {
+    @extend .expect__checklist__item;
+}
+
+.course__heading--small {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 500;
+    color: $gray-400;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.course__checklist--small {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(0, min-content));
+    grid-gap: 1.875rem;
+}
+
+.course__checklist__item--small {
+    position: relative;
+    padding-left: 2.5rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: $gray-300;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 1.5rem; height: 1.5rem;
+        background-image: url('static/img/check-icon.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+    }
+
+    @media screen and (min-width: 64rem) {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+}
+
+// ********************
+// CLOSED SECTION
+// ********************
+
+.closed__wrapper {
+    @extend .waitlist__wrapper;
+}
+
+.closed__heading {
+    @extend .waitlist__heading;
+}
+
+.testimonial--alt {
+    padding: 2.5rem;
+    background-color: $light-gray;
+    border: 1px solid $gray-400;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+    font-style: italic;
+
+    &:not(last-of-type) {
+        margin-bottom: 2.5rem;
+    }
+
+}
+
+.closed__copy {
+    @extend .hero__copy;
+}
+
+.countdown--small__heading {
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.countdown--small__button {
+    @extend .waitlist__button;
+    margin-bottom: 1.25rem;
+}
+
+.countdown--small__disclaimer {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: $gray-300;
+    text-align: center;
+}
+
+// ********************
+// READY SECTION
+// ********************
+
+.ready__wrapper {
+    @extend .closed__wrapper;
+}
+
+.ready__heading {
+    @extend .closed__heading;
+}
+
+.ready__copy {
+    @extend .closed__copy;
+}
+
+// ********************
+// CTA SECTION
+// ********************
+
+#cta {
+    @extend #testimonial;
+}
+
+.form-wrapper {
+    margin-left: auto; margin-right: auto;
+    margin-bottom: 2.5rem;
+    padding: 5rem 2.5rem;
+    max-width: 35.625rem;
+    border: 2px dashed $beige-500;
+    border-radius: 0.75rem;
+
+    @media screen and (min-width: 64rem) {
+        margin-bottom: 5rem;
+        padding: 5rem;
+    }
+
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form__input {
+    width: 100%; height: 3.5rem;
+    margin-bottom: 1.25rem;
+    padding-left: 1rem;
+    border-radius: 0.25rem;
+    background-color: rgba($white, 0.15);
+
+    &::placeholder {
+        font-size: 1.125rem;
+        font-weight: 500;
+        color: $white;
+    }
+
+}
+
+.form__submit {
+    @extend .waitlist__button;
+}
+
+.cta__testimonial {
+    @extend .testimonial;
+    max-width: 35.625rem;
+    margin: 0 auto;
+}

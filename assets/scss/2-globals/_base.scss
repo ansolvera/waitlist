@@ -1,0 +1,34 @@
+// ********************
+// GLOBAL STYLES
+// ********************
+
+body {
+    color: $gray-500;
+}
+
+main {
+    margin-top: 5.5rem;
+}
+
+h1 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-weight: 500;
+
+    @media screen and (min-width: 64rem) {
+        font-size: 3rem;
+        line-height: 1;
+    }
+
+}
+
+h2 {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+
+    @media screen and (min-width: 64rem) {
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+    }
+
+}
